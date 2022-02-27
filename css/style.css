@@ -1,10 +1,11 @@
-*, html {
+*,
+html {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Comic Neue', cursive;
+  font-family: "Comic Neue", cursive;
   background-color: #c8c8c8;
   color: #282828;
 }
@@ -12,6 +13,14 @@
 ::selection {
   background-color: #282828;
   color: #c8c8c8;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282828; 
 }
 
 /* Cores */
@@ -51,16 +60,24 @@ img {
   .menu-right {
     display: none;
   }
+
+  .menu {
+    position: absolute;
+  }
+
+  .container-header{
+    position: relative;
+  }
 }
 
 /* Textos */
 
 a {
-    text-decoration: none;
-    font-size: 24px;
-    line-height: 150%;
-    font-weight: bold;
-    background: transparent;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: bold;
+  background: transparent;
 }
 
 .light {
@@ -69,7 +86,10 @@ a {
 
 .btn {
   font-weight: normal;
+}
 
+.resp {
+  display: none;
 }
 
 label {
@@ -84,15 +104,19 @@ select {
   outline: none;
 }
 
-p, li{
+p,
+li {
   font-size: 16px;
 }
 
-p, h3, li {
+p,
+h3,
+li {
   background: transparent;
 }
 
-h3, p {
+h3,
+p {
   padding: 0px 0px 8px;
 }
 
@@ -105,15 +129,21 @@ h1 {
   background: transparent;
 }
 
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1150px) {
   h1 {
-      font-size: 48px;
+    font-size: 48px;
   }
+.resp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 960px){
+}
+
+@media screen and (max-width: 960px) {
   h1 {
-      font-size: 32px;
+    font-size: 32px;
   }
 }
 
@@ -145,6 +175,14 @@ h1 {
   background-size: contain;
 }
 
+.img-header-resp {
+  width: 100%;
+  height: 85%;
+  background-size: contain;
+  display: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent .5%, #c8c8c8 50%);
+}
+
 .title {
   position: absolute;
   display: flex;
@@ -153,16 +191,34 @@ h1 {
   background: transparent;
 }
 
-@media screen and (max-width: 1150px) {
-  .container {
-    flex-direction: column;  
+@media screen and (max-width: 1200px){
+  .img-header{
+    -webkit-mask-image: linear-gradient(to bottom, transparent .5%, #c8c8c8 50%);
+  }
 }
 
+@media screen and (max-width: 1150px) {
+  .container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .container-header {
+    margin-top: 0;
+  }
+
+  .img-header {
+    display: none;
+  }
+
+  .img-header-resp {
+    display: flex;
+  }
 }
 
 .sobre {
   display: flex;
-  width: 70%;
+  width: 80%;
   padding: 24px;
   flex-direction: column;
   background: transparent;
@@ -170,97 +226,103 @@ h1 {
 
 .sobre2 {
   display: flex;
-  width: 70%;
+  width: 80%;
   padding: 24px;
   flex-direction: column;
   background: transparent;
 }
 
 .texto {
-  width: 100%;
+  width: 80%;
   text-align: left;
   z-index: 1;
   background: transparent;
 }
 
 .texto2 {
-  width: 100%;
+  width: 80%;
   text-align: right;
   z-index: 1;
   background: transparent;
+}
+
+.img-resp, .img-resp-1 {
+  display: none;
 }
 
 .img-titans {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: left;
-  margin-left: 0;
   margin-top: 150px;
 }
 
 .img1 {
-  margin-left: 0;
-  width: 300px;
+  width: 60%;
   margin-top: 10px;
   transform: translateY(-110px) translateX(-210px);
 }
 
-.img2 {
-  width: 300px;
-  margin-top: 20px;
-  transform: translateX(-150px);
-}
-
-.img3{
-  width: 300px;
-  transform: translateY(-80px) translateX(510px);
-}
-
-.img4 {
-  width: 300px;
-  transform: translateY(-180px) translateX(550px);
-}
-
-.img5 {
-  margin-left: 0;
-  width: 300px;
+.img3 {
+  width: 50%;
   margin-top: 10px;
   transform: translateY(-110px) translateX(-210px);
+
 }
 
-.img6 {
-  width: 300px;
-  margin-top: 20px;
-  transform: translateX(-150px);
+.img2, .img4 {
+  width: 50%;
+  margin-top: 10px;
+  margin-right: 0;
+  transform: translateY(-110px) translateX(520px);
 }
 
-.img7{
-  width: 250px;
-  transform: translateY(-60px) translateX(510px);
-}
 
-.img8 {
-  width: 250px;
-  transform: translateY(-140px) translateX(550px);
-}
 
-@media screen and (max-width: 1170px){
+@media screen and (max-width: 1200px) {
   .container {
+    width: 100%;
     flex-direction: column;
   }
 
-  .sobre, .sobre2 {
+  .sobre,
+  .sobre2 {
     width: auto;
+    margin: 0 auto;
   }
 
-  .texto{
-    margin: 0 auto;
+  .texto {
+    margin: 0;
     z-index: 0;
   }
 
-  .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8{
-    width: 200px;
+  .texto2 {
+    text-align: left;
+    margin: 0;
+    z-index: 0;
+  }
+
+  .img-titans{
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .img-resp {
+    width: 130%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transform: translateY(0px);
+  } 
+  
+  .img1, .img2, .img3, .img4 {
+    display: none;
+  }
+
+  .img-resp-1 {
+    width: 130%;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -268,17 +330,12 @@ h1 {
     margin: 0 auto;
     transform: translateY(0px);
   }
-}
 
-@media screen and (max-width: 960px){
-  .img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8 {
-    flex-direction: column;
-  }
 }
 
 /* Forms */
 
-.container-header-forms{
+.container-header-forms {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -299,14 +356,14 @@ input {
   outline: none;
   padding: 10px;
   font-size: 24px;
-  border-bottom: .5px solid #282828;
+  border-bottom: 0.5px solid #282828;
 }
 
 .input {
   outline: none;
   padding: 10px;
   font-size: 24px;
-  border-bottom: .5px solid #282828;
+  border-bottom: 0.5px solid #282828;
 }
 
 .muralha {
@@ -315,7 +372,6 @@ input {
   margin-left: 100px;
   margin-top: 40px;
 }
-
 
 .btn {
   width: 200px;
@@ -327,7 +383,8 @@ input {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1170px){
+
+@media screen and (max-width: 1170px) {
   .container-header-forms {
     flex-direction: column;
     margin-top: 20px;
@@ -346,9 +403,45 @@ input {
     margin: 0 auto;
   }
 
-  .img-muralha{
+  .img-muralha {
     width: 300px;
   }
+}
 
+
+footer {
+  width: 70%;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.text-left{
+  align-items: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.a-footer{
+padding: 0px 0px 8px;
+font-size: 16px;
+font-weight: normal;
+}
+
+@media screen and (max-width: 1170px){
+  footer {
+    display: grid;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .text-right, .text-left {
+    text-align: left;
+    padding: 10px;
+  }
 
 }
