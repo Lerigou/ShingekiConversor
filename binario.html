@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão para binário</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="imagem/svg" href="./svg/logo.svg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="menu">
+        <div class="menu-left">
+            <a href="./index.html"><img src="./svg/logo.svg"></a>
+        </div>
+        <div class="menu-right">
+            <a href="./binario.html" class="link p-4">Binário</a>
+            <a href="./decimal.html" class="link p-4">Decimal</a>
+            <a href="./hexadecimal.html" class="link p-4">Hexadecimal</a>
+        </div>
+    </header>
+
+    <section class="container-header-forms">
+        <div class="forms">
+            <label>Binário</label>
+            <label>Selecione para qual sistema deseja converter:</label>
+            <select name="base" id="base" class="select">
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+            </select>
+            <label>Insira o valor a ser convertido:</label>
+            <input type="number" id="valorConverter">
+            <button class="btn" type="button" onclick="converter()"><a class="light">Converter</a></button>
+            <label>Resultado da conversão:</label>
+            <input type="text" id="res" readonly>
+            <a class="btn" onclick="resolucao()">Mostrar resolução</a>
+        </div>
+        <div class="muralha">
+            <img class="img-muralha" src="./svg/titaMuralha.svg">
+        </div>
+        
+    </section>
+
+    <script type="text/javascript" src="./binario.js"></script>
+</body>
+</html>
