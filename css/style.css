@@ -132,7 +132,11 @@ h1 {
 @media screen and (max-width: 1150px) {
   h1 {
     font-size: 48px;
+    padding: 15px;
+    justify-content: center;
+    text-align: center;
   }
+
 .resp {
   display: flex;
   align-items: center;
@@ -199,8 +203,16 @@ h1 {
 
 @media screen and (max-width: 1150px) {
   .container {
+    margin: 0 auto;
     flex-direction: column;
     text-align: left;
+    padding: 0;
+    width: 100%;
+    border: 1px solid black;
+  }
+
+  .texto {
+    width: auto;
   }
 
   .container-header {
@@ -281,7 +293,7 @@ h1 {
 
 @media screen and (max-width: 1200px) {
   .container {
-    width: 100%;
+    width: 300px;
     flex-direction: column;
   }
 
@@ -291,16 +303,13 @@ h1 {
     margin: 0 auto;
   }
 
-  .texto {
+  .texto, .texto2 {
+    width: auto;
     margin: 0;
     z-index: 0;
+    text-align: left;
   }
 
-  .texto2 {
-    text-align: left;
-    margin: 0;
-    z-index: 0;
-  }
 
   .img-titans{
     margin: 0 auto;
@@ -435,6 +444,7 @@ font-weight: normal;
 @media screen and (max-width: 1170px){
   footer {
     display: grid;
+    width: 300px;
     margin-top: 30px;
     align-items: center;
   }
