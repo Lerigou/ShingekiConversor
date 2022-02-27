@@ -78,6 +78,7 @@ a {
   line-height: 150%;
   font-weight: bold;
   background: transparent;
+  outline: none;
 }
 
 .light {
