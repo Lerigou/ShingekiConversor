@@ -36,7 +36,7 @@ html {
   padding: 24px 24px;
   background-color: transparent;
 
-  position: fixed;
+  position: absolute;
   z-index: 2;
 }
 
@@ -54,6 +54,14 @@ html {
 
 img {
   background: transparent;
+}
+
+
+
+@media screen and (max-width: 1150px){
+  .sumir {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -139,6 +147,7 @@ h1 {
   }
 
 .resp {
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,6 +204,12 @@ h1 {
   align-items: center;
   justify-content: center;
   background: transparent;
+  flex-direction: column;
+}
+
+.sumir {
+  display: flex;
+  font-size: 32px;
 }
 
 @media screen and (max-width: 1200px){
@@ -205,6 +220,7 @@ h1 {
 
 @media screen and (max-width: 1150px) {
   .container {
+    margin-top: 40px;
     margin: 0 auto;
     flex-direction: column;
     text-align: left;
